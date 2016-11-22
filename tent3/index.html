@@ -20,17 +20,13 @@ Os estados que a máquina pode assumir podem ser vistos como variaveis auxiliare
 
   Título da Operação: <input type="text" name="tituloDaTabela" style="width: 280px;"><br><br>
 
-
   <table border="1">
     <tr>
       <th>Estado</th>
       <th>*</th>
       <th>Ø</th>
-      <th>A</th>
-      <th>B</th>
       <th>→</th>
     </tr>
-
 
     <td>0</td>
 
@@ -39,8 +35,6 @@ Os estados que a máquina pode assumir podem ser vistos como variaveis auxiliare
         <option></option>
         <option value="*">*</option>
         <option value="vazio">&Oslash;</option>
-        <option value="a">A</option>
-        <option value="b">B</option>
         <option value="inicial">&rarr;</option>
         <option value="fim">F</option>
       </select>,
@@ -55,19 +49,16 @@ Os estados que a máquina pode assumir podem ser vistos como variaveis auxiliare
       )
     </td>
 
-
     <td>(
-      <select name="escreve:0:vazio'">
+      <select name="escreve:0:vazio">
         <option></option>
         <option value="*">*</option>
         <option value="vazio">&Oslash;</option>
-        <option value="a">A</option>
-        <option value="b">B</option>
         <option value="inicial">&rarr;</option>
         <option value="fim">F</option>
       </select>,
 
-      <input type="text" class="inpEst" name="proxEstado:0:vazio'">,
+      <input type="text" class="inpEst" name="proxEstado:0:vazio">,
 
       <select name="direcao:0:vazio">
         <option></option>
@@ -76,51 +67,6 @@ Os estados que a máquina pode assumir podem ser vistos como variaveis auxiliare
       </select>
       )
     </td>
-
-
-    <td>(
-      <select name="escreve:0:A">
-        <option></option>
-        <option value="*">*</option>
-        <option value="vazio">&Oslash;</option>
-        <option value="a">A</option>
-        <option value="b">B</option>
-        <option value="inicial">&rarr;</option>
-        <option value="fim">F</option>
-      </select>,
-
-      <input type="text" class="inpEst" name="proxEstado:0:A">,
-
-      <select name="direcao:0:A'">
-        <option></option>
-        <option value="D">D</option>
-        <option value="E">E</option>
-      </select>
-      )
-    </td>
-
-
-    <td>(
-      <select name="escreve:0:B'">
-        <option></option>
-        <option value="*">*</option>
-        <option value="vazio">&Oslash;</option>
-        <option value="a">A</option>
-        <option value="b">B</option>
-        <option value="inicial">&rarr;</option>
-        <option value="fim">F</option>
-      </select>,
-
-      <input type="text" class="inpEst" name="proxEstado:0:B'">,
-
-      <select name="direcao:0:B">
-        <option></option>
-        <option value="D">D</option>
-        <option value="E">E</option>
-      </select>
-      )
-    </td>
-
 
     <td>(
       <select name="escreve:0:fim">
@@ -143,8 +89,14 @@ Os estados que a máquina pode assumir podem ser vistos como variaveis auxiliare
       )
     </td>
   </table><br>
+    <input type="hidden" name="qtdEstados" value="0" id="qtdEstados">
   <input type="submit" value="Salvar" style="width: 80px;">
 </form>
+
+<br><br><br>
+**************************
+<h2>Fita</h2>
+
 
 
 <script src="js/index.js"></script>
