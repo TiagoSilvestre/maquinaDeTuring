@@ -19,8 +19,6 @@
 
 <form method="post" action="proc.php">
 
-  Título da Tabela: <input type="text" name="tituloDaTabela" style="width: 280px;"><br><br>
-
   <table border="1">
     <tr>
       <th>Estado</th>
@@ -70,7 +68,7 @@
     </td>
 
     <td>(
-      <select name="escreve:0:fim">
+      <select name="escreve:0:ini">
         <option></option>
         <option value="*">*</option>
         <option value="vazio">&Oslash;</option>
@@ -80,9 +78,9 @@
         <option value="fim">F</option>
       </select>,
 
-      <input type="text" class="inpEst" name="proxEstado:0:fim">,
+      <input type="text" class="inpEst" name="proxEstado:0:ini">,
 
-      <select name="direcao:0:fim">
+      <select name="direcao:0:ini">
         <option></option>
         <option value="D">D</option>
         <option value="E">E</option>
@@ -90,7 +88,9 @@
       )
     </td>
   </table><br>
-    <input type="hidden" name="qtdEstados" value="0" id="qtdEstados">
+
+  <input type="hidden" name="qtdEstados" value="0" id="qtdEstados">
+  Título da Tabela: <input type="text" name="tituloDaTabela" style="width: 280px;"><br><br>
   <input type="submit" value="Salvar" style="width: 80px;">
 </form>
 
@@ -109,10 +109,10 @@ $dadosTabela = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 <form method="post" action="fita.php">
     <label>Valor 1:</label>
-    <input type="text" name="valor1">
+    <input type="text" name="valor1" required>
 
     <label>Operação:</label>
-    <select name="operacao" id="bairro1">
+    <select name="operacao" id="op" required>
         <?php
         foreach ($dadosTabela as $l){
             echo "<option value='". $l['conteudo'] ."'>" . $l['titulo'] . '</option>';
@@ -121,7 +121,7 @@ $dadosTabela = $consulta->fetchAll(PDO::FETCH_ASSOC);
     </select>
 
   <label>Valor 2:</label>
-  <input type="text" name="valor2">
+  <input type="text" name="valor2" required>
   <br><br>
   <input type="submit" value="Ver Fita" style="width: 80px;">
 </form>

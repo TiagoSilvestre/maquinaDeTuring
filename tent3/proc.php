@@ -19,15 +19,13 @@ for($i = 0; $i <= $qtd; $i++){
             $tabela[$i.':vazio'] .= $val.':';
         }
 
-        if($explode[1] == $i AND $explode[2] === 'fim'){
-            $tabela[$i.':fim'] .= $val.':';
+        if($explode[1] == $i AND $explode[2] === 'ini'){
+            $tabela[$i.':ini'] .= $val.':';
         }
     }
 }
 
-
 $jsons = json_encode($tabela);
-
 
 try{
     $dbh = new PDO('mysql:host=localhost;dbname=turing', 'root', '');
@@ -41,4 +39,4 @@ try{
     echo $e->getMessage();
 }
 
-echo "<h1>Cadastrado com sucesso!</h1>";
+echo "<h1>Cadastrado com sucesso!</h1><br><a href='index.php'>Voltar</a>";
