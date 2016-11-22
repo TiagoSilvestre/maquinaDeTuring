@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3defbf85-57f9-481b-b1d2-244178fc1200" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tent2/index.html" afterPath="$PROJECT_DIR$/tent2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tent3/proc.php" afterPath="$PROJECT_DIR$/tent3/proc.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tent3/index.html" afterPath="$PROJECT_DIR$/tent3/index.php" />
     </list>
     <ignored path="maqTuring.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,25 +25,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tent3/index.html">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tent3/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+            <state relative-caret-position="17">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
               <folding>
-                <element signature="e#834#840#0" expanded="true" />
+                <element signature="n#style#0;n#input#2;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1479822183016" expanded="true" signature="2599:2620" ph="SELECT * FRO... tabelas" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="proc.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fita.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tent3/fita.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="proc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tent3/proc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+            <state relative-caret-position="544">
+              <caret line="32" column="69" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="69" />
               <folding>
-                <marker date="1479816646988" expanded="true" signature="890:1709" ph="..." />
+                <marker date="1479819296191" expanded="true" signature="611:1031" ph="..." />
+                <marker date="1479819296191" expanded="true" signature="733:798" ph="INSERT INTO tabelas... " />
               </folding>
             </state>
           </provider>
@@ -51,8 +64,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tent3/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <marker date="1479814998536" expanded="false" signature="240:248" ph="Ø" />
                 <marker date="1479814998536" expanded="false" signature="337:343" ph="→" />
@@ -82,8 +95,10 @@
         <option value="$PROJECT_DIR$/tent2/proc.php" />
         <option value="$PROJECT_DIR$/tent2/index.html" />
         <option value="$PROJECT_DIR$/tent3/js/index.js" />
-        <option value="$PROJECT_DIR$/tent3/index.html" />
         <option value="$PROJECT_DIR$/tent3/proc.php" />
+        <option value="$PROJECT_DIR$/tent3/index.html" />
+        <option value="$PROJECT_DIR$/tent3/fita.php" />
+        <option value="$PROJECT_DIR$/tent3/index.php" />
       </list>
     </option>
   </component>
@@ -95,10 +110,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1545" />
-    <option name="y" value="99" />
-    <option name="width" value="1528" />
-    <option name="height" value="852" />
+    <option name="x" value="1706" />
+    <option name="y" value="15" />
+    <option name="width" value="1349" />
+    <option name="height" value="803" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -254,18 +269,18 @@
       <workItem from="1479730614031" duration="9531000" />
       <workItem from="1479747165045" duration="6840000" />
       <workItem from="1479764303050" duration="2428000" />
-      <workItem from="1479809376910" duration="6555000" />
+      <workItem from="1479809376910" duration="12525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25354000" />
+    <option name="totallyTimeSpent" value="31324000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1545" y="99" width="1528" height="852" extended-state="0" />
+    <frame x="1706" y="15" width="1349" height="803" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17460318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19804952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -300,12 +315,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tent3/index.html">
+    <entry file="file://$PROJECT_DIR$/tent3/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#834#840#0" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1479822183016" expanded="true" signature="2599:2620" ph="SELECT * FRO... tabelas" />
           </folding>
         </state>
       </provider>
@@ -450,10 +466,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tent3/proc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="69" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="69" />
+          <folding>
+            <marker date="1479819296191" expanded="true" signature="611:1031" ph="..." />
+            <marker date="1479819296191" expanded="true" signature="733:798" ph="INSERT INTO tabelas... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tent3/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <marker date="1479814998536" expanded="false" signature="240:248" ph="Ø" />
             <marker date="1479814998536" expanded="false" signature="337:343" ph="→" />
@@ -465,22 +492,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tent3/index.html">
+    <entry file="file://$PROJECT_DIR$/tent3/fita.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
-          <folding>
-            <element signature="e#834#840#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tent3/proc.php">
+    <entry file="file://$PROJECT_DIR$/tent3/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        <state relative-caret-position="17">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding>
-            <marker date="1479816646988" expanded="true" signature="890:1709" ph="..." />
+            <element signature="n#style#0;n#input#2;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1479822183016" expanded="true" signature="2599:2620" ph="SELECT * FRO... tabelas" />
           </folding>
         </state>
       </provider>

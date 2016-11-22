@@ -11,14 +11,15 @@
   </style>
 </head>
 <body>
-Os estados que a máquina pode assumir podem ser vistos como variaveis auxiliares para a tomada de decisões.
+<h2><u>Tabela de Ações</u></h2>
+<small>Os estados que a máquina pode assumir podem ser vistos como variaveis auxiliares para a tomada de decisões.</small>
 <br><br>
 
 <button id="butao" style="display: block; width: 150px; height:25px;">Adicionar estado</button><br>
 
 <form method="post" action="proc.php">
 
-  Título da Operação: <input type="text" name="tituloDaTabela" style="width: 280px;"><br><br>
+  Título da Tabela: <input type="text" name="tituloDaTabela" style="width: 280px;"><br><br>
 
   <table border="1">
     <tr>
@@ -94,10 +95,36 @@ Os estados que a máquina pode assumir podem ser vistos como variaveis auxiliare
 </form>
 
 <br><br><br>
-**************************
-<h2>Fita</h2>
+****************************************************************
+<h2><u>Fita</u></h2>
+
+<?php
+$con = new PDO('mysql:host=localhost;dbname=turing', 'root', '');
+$sql = "SELECT * FROM tabelas";
+$consulta = $con->prepare($sql);
+$consulta->execute();
+$dadosTabela = $consulta->fetchAll(PDO::FETCH_ASSOC);
+?>
 
 
+<form method="post" action="fita.php">
+    <label>Valor 1:</label>
+    <input type="text" name="valor1">
+
+    <label>Operação:</label>
+    <select name="operacao" id="bairro1">
+        <?php
+        foreach ($dadosTabela as $l){
+            echo "<option value='". $l['conteudo'] ."'>" . $l['titulo'] . '</option>';
+        }
+        ?>
+    </select>
+
+  <label>Valor 2:</label>
+  <input type="text" name="valor2">
+  <br><br>
+  <input type="submit" value="Ver Fita" style="width: 80px;">
+</form>
 
 <script src="js/index.js"></script>
 </body>
