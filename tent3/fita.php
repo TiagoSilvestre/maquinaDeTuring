@@ -1,11 +1,7 @@
-<?php
-
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-
-$ja = json_decode($_POST['operacao']);
-?>
+<br>
+<h2><u>Executando fita</u></h2>
+<h4>* Para executar as ações passo a passo clique em Proc</h4>
+<br>
 <style>
 div{
     border: 1px solid;
@@ -23,7 +19,7 @@ div{
 
 <?php
     for ($i=0; $i<38;$i++){
-        echo "<div class='celula a".$i."'></div>";
+        echo "<div class='celula a".$i."'>-</div>";
     }
 ?>
 
@@ -33,6 +29,10 @@ div{
 <script src="js/jquery-3.1.1.min.js"></script>
 
 <script type="text/javascript">
+
+    var result = '<?=$_POST['operacao']?>';
+    var tab = JSON.parse(result);
+    console.log(tab);
     //Estado Inicial
     $('.a0').text('ini')
 
@@ -74,11 +74,15 @@ div{
 
         var result = '<?=$_POST['operacao']?>';
         var tab = JSON.parse(result);
-        console.log(tab);
+       // console.log(tab);
 
         /**************** INICIAL ******************/
 
         if(atual == 'ini'){
+            if(registrador.estado == "F"){
+                alert("Posição final, A maquina parou!");
+                return;
+            }
             var todo = tab[registrador.estado +':'+ atual];
             var parte = todo.split(":");
 
@@ -95,7 +99,7 @@ div{
             if(parte[2] == 'D'){
                 $('.current').next().addClass('current');
                 cur.removeClass('current');
-            }else if(parte[2] == 'D'){
+            }else if(parte[2] == 'E'){
                 $('.current').prev().addClass('current');
                 cur.removeClass('current');
             }
@@ -104,6 +108,10 @@ div{
         /**************** ASTERISCUUU ******************/
 
         if(atual == '*') {
+            if(registrador.estado == "F"){
+                alert("Posição final, A maquina parou!");
+                return;
+            }
             var todo = tab[registrador.estado + ':' + atual];
             console.log(todo);
             var parte = todo.split(":");
@@ -121,7 +129,7 @@ div{
             if (parte[2] == 'D') {
                 $('.current').next().addClass('current');
                 cur.removeClass('current');
-            }else if(parte[2] == 'D'){
+            }else if(parte[2] == 'E'){
                 $('.current').prev().addClass('current');
                 cur.removeClass('current');
             }
@@ -129,10 +137,13 @@ div{
 
         /**************** VAZIOO ******************/
 
-        if(atual == "") {
-            alert(registrador.estado);
+        if(atual == "-") {
+            if(registrador.estado == "F"){
+                alert("Posição final, A maquina parou!");
+                return;
+            }
+
             var todo = tab[registrador.estado + ':' + atual];
-            alert(todo);
             var parte = todo.split(":");
 
             if (parte[0] == "") {
@@ -148,7 +159,8 @@ div{
             if (parte[2] == 'D') {
                 $('.current').next().addClass('current');
                 cur.removeClass('current');
-            }else if(parte[2] == 'D'){
+            }
+            if(parte[2] == 'E'){
                 $('.current').prev().addClass('current');
                 cur.removeClass('current');
             }

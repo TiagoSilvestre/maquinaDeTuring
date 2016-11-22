@@ -23,8 +23,8 @@
     <tr>
       <th>Estado</th>
       <th>*</th>
-      <th>Ø</th>
-      <th>→</th>
+      <th>-</th>
+      <th>ini</th>
     </tr>
 
     <td>0</td>
@@ -33,8 +33,8 @@
       <select name="escreve:0:*">
         <option></option>
         <option value="*">*</option>
-        <option value="vazio">&Oslash;</option>
-        <option value="ini">&rarr;</option>
+        <option value="-">-</option>
+        <option value="ini">ini</option>
         <option value="fim">F</option>
       </select>,
 
@@ -49,17 +49,17 @@
     </td>
 
     <td>(
-      <select name="escreve:0:vazio">
+      <select name="escreve:0:-">
         <option></option>
         <option value="*">*</option>
-        <option value="vazio">&Oslash;</option>
+        <option value="-">-</option>
         <option value="ini">&rarr;</option>
         <option value="fim">F</option>
       </select>,
 
-      <input type="text" class="inpEst" name="proxEstado:0:vazio">,
+      <input type="text" class="inpEst" name="proxEstado:0:-">,
 
-      <select name="direcao:0:vazio">
+      <select name="direcao:0:-">
         <option></option>
         <option value="D">D</option>
         <option value="E">E</option>
@@ -71,7 +71,7 @@
       <select name="escreve:0:ini">
         <option></option>
         <option value="*">*</option>
-        <option value="vazio">&Oslash;</option>
+        <option value="-">-</option>
         <option value="ini">&rarr;</option>
         <option value="fim">F</option>
       </select>,

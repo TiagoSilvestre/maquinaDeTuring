@@ -15,8 +15,8 @@ for($i = 0; $i <= $qtd; $i++){
             $tabela[$i.':*'] .= $val.':';
         }
 
-        if($explode[1] == $i AND $explode[2] === 'vazio'){
-            $tabela[$i.':vazio'] .= $val.':';
+        if($explode[1] == $i AND $explode[2] === '-'){
+            $tabela[$i.':-'] .= $val.':';
         }
 
         if($explode[1] == $i AND $explode[2] === 'ini'){
