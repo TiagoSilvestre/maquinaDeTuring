@@ -34,7 +34,7 @@
         <option></option>
         <option value="*">*</option>
         <option value="vazio">&Oslash;</option>
-        <option value="inicial">&rarr;</option>
+        <option value="ini">&rarr;</option>
         <option value="fim">F</option>
       </select>,
 
@@ -53,7 +53,7 @@
         <option></option>
         <option value="*">*</option>
         <option value="vazio">&Oslash;</option>
-        <option value="inicial">&rarr;</option>
+        <option value="ini">&rarr;</option>
         <option value="fim">F</option>
       </select>,
 
@@ -72,9 +72,7 @@
         <option></option>
         <option value="*">*</option>
         <option value="vazio">&Oslash;</option>
-        <option value="a">A</option>
-        <option value="b">B</option>
-        <option value="inicial">&rarr;</option>
+        <option value="ini">&rarr;</option>
         <option value="fim">F</option>
       </select>,
 

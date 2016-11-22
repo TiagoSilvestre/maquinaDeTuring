@@ -31,13 +31,10 @@ div{
 <button onclick="proc()">Proc</button>
 
 <script src="js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript">
-    var result = '<?=$_POST['operacao']?>';
-    var tab = JSON.parse(result);
-    console.log(tab);
 
+<script type="text/javascript">
     //Estado Inicial
-    $('.a0').text('→')
+    $('.a0').text('ini')
 
     //Valores do Post
     var num1 = <?php echo $_POST['valor1']; ?>;
@@ -59,21 +56,105 @@ div{
             proc.first++;
             return;
         }
-    cabecote();
-
+        cabecote();
     }
+
     proc.first = 0;
 /***************   REGISTRADOR    **************/
 
     function registrador(estado) {
         registrador.estado = estado;
     }
-    registrador.estado = 'inicial';
+    registrador.estado = 0;
 
 /***************   CABEÇOTE    **************/
 
     function cabecote(){
-    
+        var atual = $('.current').text();
+
+        var result = '<?=$_POST['operacao']?>';
+        var tab = JSON.parse(result);
+        console.log(tab);
+
+        /**************** INICIAL ******************/
+
+        if(atual == 'ini'){
+            var todo = tab[registrador.estado +':'+ atual];
+            var parte = todo.split(":");
+
+            if(parte[0] ==  "") {
+                alert('Maquina parou!');
+            }else{
+                $('.current').text(parte[0]);
+            }
+
+            registrador.estado = parte[1];
+            console.log('Estado: '+registrador.estado);
+
+            var cur = $('.current');
+            if(parte[2] == 'D'){
+                $('.current').next().addClass('current');
+                cur.removeClass('current');
+            }else if(parte[2] == 'D'){
+                $('.current').prev().addClass('current');
+                cur.removeClass('current');
+            }
+        }
+
+        /**************** ASTERISCUUU ******************/
+
+        if(atual == '*') {
+            var todo = tab[registrador.estado + ':' + atual];
+            console.log(todo);
+            var parte = todo.split(":");
+
+            if (parte[0] == "") {
+                alert('Maquina parou!');
+            } else {
+                $('.current').text(parte[0]);
+            }
+
+            registrador.estado = parte[1];
+            console.log('Estado: ' + registrador.estado);
+
+            var cur = $('.current');
+            if (parte[2] == 'D') {
+                $('.current').next().addClass('current');
+                cur.removeClass('current');
+            }else if(parte[2] == 'D'){
+                $('.current').prev().addClass('current');
+                cur.removeClass('current');
+            }
+        }
+
+        /**************** VAZIOO ******************/
+
+        if(atual == "") {
+            alert(registrador.estado);
+            var todo = tab[registrador.estado + ':' + atual];
+            alert(todo);
+            var parte = todo.split(":");
+
+            if (parte[0] == "") {
+                alert('Maquina parou!');
+            } else {
+                $('.current').text(parte[0]);
+            }
+
+            registrador.estado = parte[1];
+            console.log('Estado: ' + registrador.estado);
+
+            var cur = $('.current');
+            if (parte[2] == 'D') {
+                $('.current').next().addClass('current');
+                cur.removeClass('current');
+            }else if(parte[2] == 'D'){
+                $('.current').prev().addClass('current');
+                cur.removeClass('current');
+            }
+        }
+
+
     }
 
 </script>
