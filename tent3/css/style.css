@@ -1,0 +1,23 @@
+body{
+    display: block;
+}
+
+th {
+    text-align: center;
+}
+
+input{
+    width:20px;
+}
+
+form{
+    display: inline-block;
+}
+
+h2 {
+    color: orange;
+}
+
+.page-header {
+    margin: 40px 0 10px!important;
+}

@@ -19,6 +19,14 @@ for($i = 0; $i <= $qtd; $i++){
             $tabela[$i.':-'] .= $val.':';
         }
 
+        if($explode[1] == $i AND $explode[2] === 'a'){
+            $tabela[$i.':a'] .= $val.':';
+        }
+
+        if($explode[1] == $i AND $explode[2] === 'b'){
+            $tabela[$i.':b'] .= $val.':';
+        }
+
         if($explode[1] == $i AND $explode[2] === 'ini'){
             $tabela[$i.':ini'] .= $val.':';
         }

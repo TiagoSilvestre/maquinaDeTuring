@@ -1,6 +1,8 @@
 <br>
-<h2><u>Executando fita</u></h2>
-<h4>* Para executar as ações passo a passo clique em Proc</h4>
+<h2 style="color: orange;">Executando fita</h2>
+
+<p>Para executar as ações passo a passo clique em Próximo Passo</p>
+<!--<h4>* Para executar as ações passo a passo clique em Próximo Passo</h4>-->
 <br>
 <style>
 div{
@@ -24,10 +26,11 @@ div{
 ?>
 
 <br><br><br>
-<button onclick="proc()">Proc</button>
+<button onclick="proc()">Próximo Passo</button>
+<br><br>
+<a href="index.php">Voltar</a>
 
 <script src="js/jquery-3.1.1.min.js"></script>
-
 <script type="text/javascript">
 
     var result = '<?=$_POST['operacao']?>';
@@ -113,7 +116,6 @@ div{
                 return;
             }
             var todo = tab[registrador.estado + ':' + atual];
-            console.log(todo);
             var parte = todo.split(":");
 
             if (parte[0] == "") {
@@ -166,6 +168,65 @@ div{
             }
         }
 
+    /**************** A ******************/
+
+    if(atual == 'a'){
+        if(registrador.estado == "F"){
+            alert("Posição final, A maquina parou!");
+            return;
+        }
+        var todo = tab[registrador.estado +':'+ atual];
+        var parte = todo.split(":");
+
+
+        if(parte[0] ==  "") {
+            alert('Maquina parou!');
+        }else{
+            $('.current').text(parte[0]);
+        }
+
+        registrador.estado = parte[1];
+        console.log('Estado: '+registrador.estado);
+
+        var cur = $('.current');
+        if(parte[2] == 'D'){
+            $('.current').next().addClass('current');
+            cur.removeClass('current');
+        }else if(parte[2] == 'E'){
+            $('.current').prev().addClass('current');
+            cur.removeClass('current');
+        }
+    }
+
+
+    /**************** B ******************/
+
+    if(atual == 'b'){
+        if(registrador.estado == "F"){
+            alert("Posição final, A maquina parou!");
+            return;
+        }
+        var todo = tab[registrador.estado +':'+ atual];
+        var parte = todo.split(":");
+
+        if(parte[0] ==  "") {
+            alert('Maquina parou!');
+        }else{
+            $('.current').text(parte[0]);
+        }
+
+        registrador.estado = parte[1];
+        console.log('Estado: '+registrador.estado);
+
+        var cur = $('.current');
+        if(parte[2] == 'D'){
+            $('.current').next().addClass('current');
+            cur.removeClass('current');
+        }else if(parte[2] == 'E'){
+            $('.current').prev().addClass('current');
+            cur.removeClass('current');
+        }
+    }
 
     }
 
